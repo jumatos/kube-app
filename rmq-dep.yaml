@@ -22,12 +22,9 @@ spec:
               containerPort: 15672
           env:
             - name: RABBITMQ_DEFAULT_PASS
-            - valueFrom:
+              valueFrom:
                 secretKeyRef:
                   name: app-secret
                   key: rmq-pass
             - name: RABBITMQ_DEFAULT_USER
               value: "guest"
-
-
-
